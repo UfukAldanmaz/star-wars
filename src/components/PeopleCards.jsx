@@ -1,28 +1,53 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { PeopleWrapper } from "./StyledComponents/ScPeople";
+
 const PeopleCard = ({ item }) => {
 
-    return (<div>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Name</th>
-                    <th>Height</th>
-                    <th>Gender</th>
-                    <th>Films</th>
-                </tr>
-                <tr>
-                    <td>{item.name}</td>
-                    <td>{item.height}</td>
-                    <td>{item.gender}</td>
-                    {/* <td>{item.films}</td> */}
-                    {/* <td>{film.map(item => {
-        return <div>{item.title}</div>
-    })}</td> */}
-                </tr>
-            </tbody>
-        </table>
+    const [filmDetails, setFilmDetails] = useState([]);
 
-    </div>)
+    const getFilms = () => {
+        setFilmDetails([]);
+        item.films.forEach(film => {
 
+            const filmId = film.charAt(film.length - 2);
+            const filmDetail = JSON.parse(localStorage.getItem(`film-${filmId}`));
+            console.dir(filmDetail)
+            setFilmDetails(oldArray => [...oldArray, filmDetail]);
+        });
+    }
+
+    useEffect(() => {
+        getFilms();
+
+        // fetchFilms();
+    }, [])
+
+    // const [fetchedFilms, setFetchedFilms] = useState([]);
+
+    // function fetchFilms() {
+
+    //     setFetchedFilms([])
+    //     console.log(`abc`, fetchedFilms);
+    //     item.films.forEach(filmUrl => {
+
+    //         axios.get(filmUrl).then((res) => {
+    //             setFetchedFilms(old => [...old, res.data])
+    //         })
+    //     })
+    // }
+
+
+    return <>
+        <td className="people-table">{item.name}</td>
+        <td className="people-table">{item.height}</td>
+        <td className="people-table">{item.gender}</td>
+        <td className="people-table-films">{
+            filmDetails.map(film => {
+                return film.title;
+            }).join(', ')
+        }</td>
+    </>
 }
 
 export default PeopleCard;
