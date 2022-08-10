@@ -8,29 +8,31 @@ export const PeopleWrapper = styled.div`
     flex-direction: row;
     border: 1px solid purple;
     border-radius: 8px;
+    width:100%;
     height: 50px;
-    margin:0 5px 0 5px;  
+    margin:0 0px 2px 0px;  
   }
   .table-wrap {
     margin-bottom: 50px;
   }
   .table-title{
     text-align:center;
-    padding:13px;
-    width:190px;
+    padding:14px;
+    width:192px;
   }
   .table-title-act{
     margin-top: 15px;
-    margin-left: 55px;
-    width: 80px
+    margin-left: 15px;
+    width: 130px
   }
   .people{
     display: flex;
     align-items:center;
     flex-direction: row;
+    width: 100%;
     height: 50px;
     border: 1px solid purple;
-    margin: 5px;
+    margin: 2px;
     padding-bottom: 25px;
     border-radius: 8px;
    }

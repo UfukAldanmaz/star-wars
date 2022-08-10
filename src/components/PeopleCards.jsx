@@ -1,9 +1,17 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { PeopleWrapper } from "./StyledComponents/ScPeople";
+
 
 const PeopleCard = ({ item }) => {
 
     const [filmDetails, setFilmDetails] = useState([]);
 
+    const deletePerson = (e) => {
+        e.target.parentElement.parentElement.remove()
+        // e.target.parentNode.parentNode.remove()
+        // let parent = e.target.closest("td");
+        // parent.parentElement.remove();
+    }
     const getFilms = () => {
         setFilmDetails([]);
         item.films.forEach(film => {
@@ -35,7 +43,7 @@ const PeopleCard = ({ item }) => {
     // }
 
 
-    return <>
+    return <tr className="people">
         <td className="people-table">{item.name}</td>
         <td className="people-table">{item.height}</td>
         <td className="people-table">{item.gender}</td>
@@ -44,7 +52,10 @@ const PeopleCard = ({ item }) => {
                 return film.title;
             }).join(', ')
         }</td>
-    </>
+        <td className="people-table-btn">
+            <button onClick={deletePerson} className='remove-btn'>❌</button>
+        </td>
+    </tr>
 }
 
 export default PeopleCard;

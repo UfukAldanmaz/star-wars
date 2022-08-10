@@ -86,35 +86,43 @@ const MainPage = () => {
         return false;
     })
 
-    return (<> {!user.isAuth ?
+    return (<div> {!user.isAuth ?
         <StyledLogin>
             <input placeholder="name" className="name-input" />
             <input type='password' placeholder="password" className="pass-input" />
             <button className="login-btn" onClick={handleLogin}>Login</button>
-        </StyledLogin> : <Wrapper>
+        </StyledLogin> : <div> <Wrapper>
             <h1 className="header">STAR WARS</h1>
-            <div className="input-drop-container">
-                <input placeholder="Search" value={search} onChange={handleChange} className='search'></input>
-                <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)} className='selection'>
-                    <option value=''>All genders</option>
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
-                    <option value='n/a'>n/a</option>
-                </select>
+            <div>
+                <div className="input-drop-container">
+                    <input placeholder="Search" value={search} onChange={handleChange} className='search'></input>
+                    <div>
+                        <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)} className='selection'>
+                            <option value=''>All genders</option>
+                            <option value='male'>Male</option>
+                            <option value='female'>Female</option>
+                            <option value='n/a'>n/a</option>
+                        </select>
+                    </div>
+                </div>
             </div>
             <StyledLogout>
                 <button className="logout" onClick={logout}>Logout</button>
             </StyledLogout>
-            {isLoading ? <TailSpin
-                height="80"
-                width="80"
-                radius="9"
-                color='yellow'
-                ariaLabel='three-dots-loading'
-                wrapperStyle
-                wrapperClass
-            /> : <PeopleList data={filteredData} />}
-        </Wrapper>} </>
+            <div>
+                {isLoading ? <TailSpin
+                    height="80"
+                    width="80"
+                    radius="9"
+                    color='yellow'
+                    ariaLabel='three-dots-loading'
+                    wrapperStyle
+                    wrapperClass
+                /> : <PeopleList data={filteredData} />}
+            </div>
+        </Wrapper>
+        </div>}
+    </div>
 
     )
 }
