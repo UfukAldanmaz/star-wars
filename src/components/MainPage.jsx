@@ -3,7 +3,8 @@ import axios from "axios";
 import { Wrapper } from "./StyledComponents/ScMainPage";
 import PeopleList from "./PeopleList";
 import { TailSpin } from 'react-loader-spinner';
-import Logout from "./Logout";
+import { StyledLogin } from "./StyledComponents/ScLogin";
+import { StyledLogout } from "./StyledComponents/ScLogout";
 
 const MainPage = () => {
 
@@ -12,6 +13,25 @@ const MainPage = () => {
     const [film, setFilm] = useState([]);
     const [selectedGender, setSelectedGender] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [user, setUser] = useState({
+        name: 'admin',
+        password: 'admin',
+        isAuth: false
+    })
+
+    const handleLogin = () => {
+        setUser({
+            ...user,
+            isAuth: true
+        })
+    }
+
+    const logout = () => {
+        setUser({
+            ...user,
+            isAuth: false
+        })
+    };
 
     const getData = async () => {
         let res = await axios.get('https://swapi.dev/api/people/?format=json');
@@ -66,8 +86,12 @@ const MainPage = () => {
         return false;
     })
 
-    return (
-        <Wrapper>
+    return (<> {!user.isAuth ?
+        <StyledLogin>
+            <input placeholder="name" className="name-input" />
+            <input type='password' placeholder="password" className="pass-input" />
+            <button className="login-btn" onClick={handleLogin}>Login</button>
+        </StyledLogin> : <Wrapper>
             <h1 className="header">STAR WARS</h1>
             <div className="input-drop-container">
                 <input placeholder="Search" value={search} onChange={handleChange} className='search'></input>
@@ -78,7 +102,9 @@ const MainPage = () => {
                     <option value='n/a'>n/a</option>
                 </select>
             </div>
-            <Logout />
+            <StyledLogout>
+                <button className="logout" onClick={logout}>Logout</button>
+            </StyledLogout>
             {isLoading ? <TailSpin
                 height="80"
                 width="80"
@@ -88,7 +114,8 @@ const MainPage = () => {
                 wrapperStyle
                 wrapperClass
             /> : <PeopleList data={filteredData} />}
-        </Wrapper>
+        </Wrapper>} </>
+
     )
 }
 
