@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const PeopleWrapper = styled.div`
-    margin-top: 20px;
+    margin-top: 30px;
   .titles{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     border: 1px solid purple;
     border-radius: 8px;
-    width:100%;
+    width:105%;
     height: 60px;
     margin:0 0px 2px 0px;  
   }
@@ -16,21 +16,21 @@ export const PeopleWrapper = styled.div`
     margin-bottom: 50px;
   }
   .table-title{
-    margin-top: 15px;
-    margin-left:15px;
+    margin-top: 18px;
+    margin-left: 15px;
     text-align:center;
     width:195px;
   }
   .table-title-act{
-    margin-top: 15px;
+    margin-top: 18px;
     margin-left: 15px;
-    width: 195px
+    width: 195px;
   }
   .people{
     display: flex;
     align-items:center;
     flex-direction: row;
-    width: 100%;
+    width: 105%;
     height: 70px;
     border: 1px solid purple;
     margin: 2px;
