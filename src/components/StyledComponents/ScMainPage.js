@@ -14,10 +14,10 @@ export const Wrapper = styled.div`
     background-color: purple;
     width: 350px;
     margin-right: 15px;
-    padding: 5px;
+    margin-bottom: 8px;
+    padding: 7px;
     border-radius: 12px;
     border:none;&:hover{
-    width: 370px;
     box-shadow: 2px 2px yellow;
   }
   }
@@ -25,7 +25,8 @@ export const Wrapper = styled.div`
     color: yellow;
   }
   .selection{
-    padding: 5px;
+    margin-bottom: 8px;
+    padding: 7px;
     background-color: purple;
     color: yellow;
     border-radius: 12px;
@@ -44,7 +45,7 @@ export const Wrapper = styled.div`
     flex-direction:row;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px;   
+    margin: 10px;   
      @media only screen and (max-width: 600px){
         display: flex;
         flex-direction: column;
