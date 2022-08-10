@@ -16,14 +16,15 @@ export const PeopleWrapper = styled.div`
     margin-bottom: 50px;
   }
   .table-title{
+    margin-top: 15px;
+    margin-left:15px;
     text-align:center;
-    padding:14px;
-    width:192px;
+    width:195px;
   }
   .table-title-act{
     margin-top: 15px;
     margin-left: 15px;
-    width: 130px
+    width: 195px
   }
   .people{
     display: flex;
@@ -45,6 +46,7 @@ export const PeopleWrapper = styled.div`
     padding: 8px;
     border-radius: 5px;
     margin-right: 35px;
+    cursor: pointer;
     }
   .people-table{ 
     width: 180px;
