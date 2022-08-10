@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
     border-radius: 12px;
     border:none;&:hover{
     width: 370px;
-    box-shadow: 1px 2px yellow;
+    box-shadow: 2px 2px yellow;
   }
   }
   .search::placeholder{
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     cursor: pointer;
     &:hover {
       width: 110px;
-    box-shadow: 3px 3px yellow;
+    box-shadow: 2px 2px yellow;
     }
     @media only screen and (max-width: 600px){
         margin-top: 20px;
