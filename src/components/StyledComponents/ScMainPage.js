@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-
-background: black;
-color: yellow;
+  color: yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
   .header {
     color: yellow;
   }
@@ -35,11 +35,22 @@ color: yellow;
       width: 110px;
     box-shadow: 3px 3px yellow;
     }
-  }.input-drop-container {
+    @media only screen and (max-width: 600px){
+        margin-top: 20px;
+    }
+  }
+  .input-drop-container {
     display: flex;
     flex-direction:row;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px;   
+     @media only screen and (max-width: 600px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
   }
+ 
 `

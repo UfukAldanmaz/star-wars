@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Wrapper } from "./StyledComponents/ScMainPage";
 import PeopleList from "./PeopleList";
-import PeopleCard from "./PeopleCards";
+import { TailSpin } from 'react-loader-spinner';
+import Logout from "./Logout";
 
 const MainPage = () => {
 
@@ -10,10 +11,12 @@ const MainPage = () => {
     const [search, setSearch] = useState('');
     const [film, setFilm] = useState([]);
     const [selectedGender, setSelectedGender] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     const getData = async () => {
         let res = await axios.get('https://swapi.dev/api/people/?format=json');
         setPeople(res.data.results);
+        setIsLoading(false);
     }
 
     const getFilm = async () => {
@@ -75,7 +78,16 @@ const MainPage = () => {
                     <option value='n/a'>n/a</option>
                 </select>
             </div>
-            <PeopleList data={filteredData} />
+            <Logout />
+            {isLoading ? <TailSpin
+                height="80"
+                width="80"
+                radius="9"
+                color='yellow'
+                ariaLabel='three-dots-loading'
+                wrapperStyle
+                wrapperClass
+            /> : <PeopleList data={filteredData} />}
         </Wrapper>
     )
 }
