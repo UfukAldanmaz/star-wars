@@ -1,6 +1,4 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { PeopleWrapper } from "./StyledComponents/ScPeople";
 
 const PeopleCard = ({ item }) => {
 
@@ -12,7 +10,6 @@ const PeopleCard = ({ item }) => {
 
             const filmId = film.charAt(film.length - 2);
             const filmDetail = JSON.parse(localStorage.getItem(`film-${filmId}`));
-            console.dir(filmDetail)
             setFilmDetails(oldArray => [...oldArray, filmDetail]);
         });
     }
