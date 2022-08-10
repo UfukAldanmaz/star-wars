@@ -5,7 +5,7 @@ import PeopleCard from "./PeopleCards";
 
 class PeopleList extends React.Component {
     deletePerson = (e) => {
-        e.target.parentElement.remove();
+        e.target.parentElement.parentElement.remove();
     }
     render() {
         return (
