@@ -9,7 +9,7 @@ export const PeopleWrapper = styled.div`
     border: 1px solid purple;
     border-radius: 8px;
     width:100%;
-    height: 50px;
+    height: 60px;
     margin:0 0px 2px 0px;  
   }
   .table-wrap {
@@ -31,7 +31,7 @@ export const PeopleWrapper = styled.div`
     align-items:center;
     flex-direction: row;
     width: 100%;
-    height: 50px;
+    height: 70px;
     border: 1px solid purple;
     margin: 2px;
     padding-bottom: 25px;
@@ -62,7 +62,7 @@ export const PeopleWrapper = styled.div`
     overflow: scroll;
     border: 1px solid purple;
     width: 250px;
-    height: 60px;
+    height: 70px;
     margin-top: 25px;
     }
  `
