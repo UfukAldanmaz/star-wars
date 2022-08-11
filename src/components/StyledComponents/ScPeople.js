@@ -14,7 +14,10 @@ export const PeopleWrapper = styled.div`
   }
   .table-wrap {
     margin-bottom: 50px;
-    width: 100%;
+    width: 102%;
+    @media only screen and (max-width: 600px){
+       width:105%;
+    }
   }
   .table-title{
     text-align:center;
