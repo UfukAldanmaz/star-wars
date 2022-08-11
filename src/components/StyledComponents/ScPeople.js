@@ -10,7 +10,7 @@ export const PeopleWrapper = styled.div`
     border-radius: 8px;
     width:100%;
     height: 65px;
-    margin-bottom: 2px;  
+    margin-bottom: 3px;  
   }
   .table-wrap {
     margin-bottom: 50px;
@@ -36,7 +36,7 @@ export const PeopleWrapper = styled.div`
     width: 100%;
     height: 70px;
     border: 1px solid purple;
-    margin: 2px;
+    margin-bottom: 5px;
     padding-bottom: 25px;
     border-radius: 8px;
    }
