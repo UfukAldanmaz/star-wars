@@ -14,7 +14,7 @@ class PeopleList extends React.Component {
                             <th className="table-title">Name</th>
                             <th className="table-title">Height</th>
                             <th className="table-title">Gender</th>
-                            <th className="table-title">Films</th>
+                            <th className="table-title-films">Films</th>
                             <th className="table-title-act">Actions</th>
                         </tr>
                     </thead>
