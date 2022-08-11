@@ -19,16 +19,16 @@ const PeopleCard = ({ item }) => {
 
     useEffect(() => {
         getFilms();
-
         // fetchFilms();
     }, [])
 
+    // function below is the second method for retrieving the data 
+    // but doing this with localstorage is more effective.
     // const [fetchedFilms, setFetchedFilms] = useState([]);
 
     // function fetchFilms() {
 
     //     setFetchedFilms([])
-    //     console.log(`abc`, fetchedFilms);
     //     item.films.forEach(filmUrl => {
 
     //         axios.get(filmUrl).then((res) => {
