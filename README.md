@@ -1,5 +1,9 @@
 My assignment for Kodluyoruz Frontend Bootcamp (second week).
 
+*name: admin
+
+*password: admin
+
 Live site: https://ufukaldanmaz.github.io/star-wars/ 
 
 ![Ekran Resmi 2022-08-11 18 19 57](https://user-images.githubusercontent.com/61687476/184169235-d7d6f5bf-cb17-44fb-9001-53ea2368a894.png)
