@@ -23,7 +23,7 @@ const PeopleCard = ({ item }) => {
     }, [])
 
     // function below is the second method for retrieving the data 
-    // but doing this with localstorage is more effective.
+    // but doing this with the localstorage is more effective.
     // const [fetchedFilms, setFetchedFilms] = useState([]);
 
     // function fetchFilms() {
