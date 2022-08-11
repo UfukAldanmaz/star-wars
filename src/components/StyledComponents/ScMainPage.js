@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
     border-radius: 12px;
     border:none;&:hover{
     box-shadow: 2px 2px yellow;
+    color: yellow;
   }
   }
   .search::placeholder{
