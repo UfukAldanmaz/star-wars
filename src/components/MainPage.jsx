@@ -89,7 +89,7 @@ const MainPage = () => {
     return (<div> {!user.isAuth ?
         <StyledLogin>
             <input placeholder="name" className="name-input" />
-            <input type='password' placeholder="password" className="pass-input" />
+            <input type="password" placeholder="password" className="pass-input" />
             <button className="login-btn" onClick={handleLogin}>Login</button>
         </StyledLogin> : <div> <Wrapper>
             <h1 className="header">STAR WARS</h1>
