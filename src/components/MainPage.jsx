@@ -23,6 +23,9 @@ const MainPage = () => {
             ...user,
             isAuth: true
         })
+        setSearch('');
+        setSelectedGender('');
+        getData();
     }
 
     const logout = () => {
@@ -51,6 +54,13 @@ const MainPage = () => {
             localStorage.setItem(key, JSON.stringify(film));
         });
 
+    }
+
+    const deletePerson = (url) => {
+        setPeople(current =>
+            current.filter(person => {
+                return person.url !== url;
+            }))
     }
 
     const handleChange = (e) => {
@@ -118,7 +128,7 @@ const MainPage = () => {
                     ariaLabel='three-dots-loading'
                     wrapperStyle
                     wrapperClass
-                /> : <PeopleList data={filteredData} />}
+                /> : <PeopleList data={filteredData} deletePerson={deletePerson} />}
             </div>
         </Wrapper>
         </div>}

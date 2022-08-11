@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const PeopleCard = ({ item }) => {
+const PeopleCard = ({ item, deletePerson, key }) => {
 
     const [filmDetails, setFilmDetails] = useState([]);
 
-    const deletePerson = (e) => {
-        e.target.parentElement.parentElement.remove()
-    }
     const getFilms = () => {
         setFilmDetails([]);
         item.films.forEach(film => {
@@ -41,7 +38,7 @@ const PeopleCard = ({ item }) => {
     // }
 
 
-    return <tr className="people">
+    return <tr className="people" key={key}>
         <td className="people-table">{item.name}</td>
         <td className="people-table">{item.height}</td>
         <td className="people-table">{item.gender}</td>
@@ -51,7 +48,7 @@ const PeopleCard = ({ item }) => {
             }).join(', ')
         }</td>
         <td className="people-table-btn">
-            <button onClick={deletePerson} className="remove-btn">❌</button>
+            <button onClick={e => deletePerson(item.url)} className="remove-btn">❌</button>
         </td>
     </tr>
 }

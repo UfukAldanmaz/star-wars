@@ -18,13 +18,11 @@ class PeopleList extends React.Component {
                             <th className="table-title-act">Actions</th>
                         </tr>
                     </thead>
-
-                    {this.props.data.map((item, index) => (
-                        <tbody key={index}>
-                            <PeopleCard item={item} />
-                        </tbody>
-                    ))}
-
+                    <tbody >
+                        {this.props.data.map((item, index) => (
+                            <PeopleCard item={item} deletePerson={this.props.deletePerson} key={index} />
+                        ))}
+                    </tbody>
                 </table>
             </div>
         </PeopleWrapper>
