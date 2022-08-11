@@ -17,16 +17,20 @@ export const PeopleWrapper = styled.div`
     width: 100%;
   }
   .table-title{
-    margin-left:85px;
     text-align:center;
-    width: 180px;
+    width: 150px;
     margin: 25px 5px 5px 25px;
     height: 20px;
   }
   .table-title-act{
     text-align:center;
-    margin: 25px 5px 5px 75px;
-    width: 73px;
+    margin: 25px 18px 5px 5px;
+    width: 120px;
+    height: 20px;
+  }
+  .table-title-films{
+    width: 200px;
+    margin: 25px 5px 5px 25px;
     height:20px;
   }
   .people{
@@ -52,21 +56,20 @@ export const PeopleWrapper = styled.div`
     cursor: pointer;
     }
   .people-table{ 
-    width: 180px;
+    width: 150px;
     text-align: center;
-    margin: 30px 5px 5px 25px;
+    margin: 25px 5px 5px 25px;
     }
   .people-table-btn{
-    margin-top: 30px;
-    margin-left: 50px;
-    width: 80px
+    margin: 25px 5px 5px 85px;
+    width: 40px
     }
   .people-table-films {
     overflow: scroll;
     border: 1px solid purple;
-    width: 250px;
+    width: 200px;
     height: 70px;
-    margin-top: 25px;
+    margin: 25px 5px 5px 25px;
     }
  `
 
