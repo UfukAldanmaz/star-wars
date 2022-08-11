@@ -39,5 +39,9 @@ export const StyledLogin = styled.div`
     color:yellow;
   }
   }
+  .error-message{
+      color: yellow;
+      margin-top: 25px;
+    }
   `
 
