@@ -19,8 +19,8 @@ class PeopleList extends React.Component {
                         </tr>
                     </thead>
 
-                    {this.props.data.map(item => (
-                        <tbody key={item.name}>
+                    {this.props.data.map((item, index) => (
+                        <tbody key={index}>
                             <PeopleCard item={item} />
                         </tbody>
                     ))}
