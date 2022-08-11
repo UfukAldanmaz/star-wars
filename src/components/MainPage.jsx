@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios";
 import { Wrapper } from "./StyledComponents/ScMainPage";
 import PeopleList from "./PeopleList";
@@ -10,7 +10,6 @@ const MainPage = () => {
 
     const [people, setPeople] = useState([]);
     const [search, setSearch] = useState('');
-    const [film, setFilm] = useState([]);
     const [selectedGender, setSelectedGender] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState({
@@ -41,9 +40,10 @@ const MainPage = () => {
 
     const getFilm = async () => {
         let res = await axios.get('https://swapi.dev/api/films/?format=json');
-        setFilm(res.data.results);
 
-
+        // Cache film data from API in LocalStorage.
+        // This data will be used to fill film titles of every person row.
+        // It is usefull to get all data once instead of retrieving every film detail for a person.
         res.data.results.forEach(film => {
             const filmId = film.url.charAt(film.url.length - 2);
             const key = `film-${filmId}`;
