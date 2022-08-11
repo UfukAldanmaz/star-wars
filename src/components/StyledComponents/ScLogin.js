@@ -21,6 +21,7 @@ export const StyledLogin = styled.div`
     padding: 10px;
     margin-top: 25px;
     border: none;
+    color: yellow;
 
     background-color: purple;&::placeholder{
     color:yellow;
