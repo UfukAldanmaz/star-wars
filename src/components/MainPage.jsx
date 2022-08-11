@@ -17,15 +17,22 @@ const MainPage = () => {
         password: 'admin',
         isAuth: false
     })
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleLogin = () => {
-        setUser({
-            ...user,
-            isAuth: true
-        })
-        setSearch('');
-        setSelectedGender('');
-        getData();
+        if (user.name === userName && user.password === password) {
+            setUser({
+                ...user,
+                isAuth: true
+            })
+            setSearch('');
+            setSelectedGender('');
+            getData();
+        } else {
+            setError('Wrong username or password!')
+        }
     }
 
     const logout = () => {
@@ -98,9 +105,10 @@ const MainPage = () => {
 
     return (<div> {!user.isAuth ?
         <StyledLogin>
-            <input placeholder="name" className="name-input" />
-            <input type="password" placeholder="password" className="pass-input" />
+            <input onChange={e => setUserName(e.target.value)} value={userName} placeholder="name" className="name-input" />
+            <input onChange={e => setPassword(e.target.value)} value={password} type="password" placeholder="password" className="pass-input" />
             <button className="login-btn" onClick={handleLogin}>Login</button>
+            <span className="error-message">{error}</span>
         </StyledLogin> : <div> <Wrapper>
             <h1 className="header">STAR WARS</h1>
             <div>
