@@ -14,9 +14,9 @@ export const PeopleWrapper = styled.div`
   }
   .table-wrap {
     margin-bottom: 50px;
-    width: 102%;
+    width: 100%;
     @media only screen and (max-width: 600px){
-       width:105%;
+       width:109%; 
     }
   }
   .table-title{
@@ -24,17 +24,32 @@ export const PeopleWrapper = styled.div`
     width: 150px;
     margin: 25px 5px 5px 25px;
     height: 20px;
+    @media only screen and (max-width: 600px){
+     height:5px;
+     padding:2px 5px 0 0;
+     width: 58px;
+     margin:22px 0 5px 28px;}
   }
   .table-title-act{
     text-align:center;
     margin: 25px 18px 5px 5px;
     width: 120px;
     height: 20px;
+    @media only screen and (max-width: 600px){
+     height:5px;
+     padding:2px 5px 0 2px;
+     width: 20px;
+     margin:22px 2px 5px 30px;}
   }
   .table-title-films{
     width: 200px;
     margin: 25px 5px 5px 25px;
     height:20px;
+    @media only screen and (max-width: 600px){
+     height:5px;
+     padding:2px 5px 0 0;
+     width: 58px;
+     margin:22px 0 5px 50px;}
   }
   .people{
     display: flex;
@@ -61,18 +76,31 @@ export const PeopleWrapper = styled.div`
   .people-table{ 
     width: 150px;
     text-align: center;
-    margin: 25px 5px 5px 25px;
+    margin: 25px 5px 5px 25px;@media only screen and (max-width: 600px){
+     height:5px;
+     padding:10px;
+     width: 65px;
+     margin:5px;}
     }
   .people-table-btn{
     margin: 25px 5px 5px 85px;
-    width: 40px
+    width: 40px; 
+    @media only screen and (max-width: 600px){
+     height:5px;
+     padding:10px;
+     width: 65px;
+     margin:2px 0 0 30px;}
     }
   .people-table-films {
     overflow: scroll;
     border: 1px solid purple;
     width: 200px;
     height: 70px;
-    margin: 25px 5px 5px 25px;
+    margin: 25px 5px 5px 25px;@media only screen and (max-width: 600px){
+     height:50px;
+     padding:10px;
+     width: 65px;
+     margin-top:25px;}
     }
  `
 
