@@ -10,10 +10,11 @@ export const PeopleWrapper = styled.div`
     border-radius: 8px;
     width:100%;
     height: 65px;
-    margin:0 0px 2px 0px;  
+    margin-bottom: 2px;  
   }
   .table-wrap {
     margin-bottom: 50px;
+    width: 100%;
   }
   .table-title{
     margin-left:85px;
