@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { PeopleWrapper } from "./StyledComponents/ScPeople";
-
 
 const PeopleCard = ({ item }) => {
 
@@ -8,9 +6,6 @@ const PeopleCard = ({ item }) => {
 
     const deletePerson = (e) => {
         e.target.parentElement.parentElement.remove()
-        // e.target.parentNode.parentNode.remove()
-        // let parent = e.target.closest("td");
-        // parent.parentElement.remove();
     }
     const getFilms = () => {
         setFilmDetails([]);
@@ -53,7 +48,7 @@ const PeopleCard = ({ item }) => {
             }).join(', ')
         }</td>
         <td className="people-table-btn">
-            <button onClick={deletePerson} className='remove-btn'>❌</button>
+            <button onClick={deletePerson} className="remove-btn">❌</button>
         </td>
     </tr>
 }
